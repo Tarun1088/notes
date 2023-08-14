@@ -10,7 +10,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: "http://localhost:5000/google/callback",
+      callbackURL: "https://tame-lime-cockatoo-suit.cyclic.app/google/callback",
     },
     async function (accessToken, refreshToken, profile, done) {
       const newUser = {

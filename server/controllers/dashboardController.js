@@ -26,7 +26,7 @@ exports.dashboard = async (req, res) => {
       userName: req.user.firstName,
       locals,
       notes,
-      layout: "layouts/dashboard",
+      layout: "../views/layouts/dashboard",
     });
   } catch (error) {
     console.log(error);
@@ -46,7 +46,7 @@ exports.dashboardViewNote = async (req, res) => {
       res.render("dashboard/view-note", {
         noteID: req.params.id,
         note,
-        layout: "layouts/dashboard",
+        layout: "../views/layouts/dashboard",
       });
     } else {
       res.send("Note not found or unauthorized.");
@@ -63,7 +63,7 @@ exports.dashboardViewNote = async (req, res) => {
  */
 exports.dashboardAddNote = async (req, res) => {
   res.render("dashboard/add", {
-    layout: "layouts/dashboard",
+    layout: "../views/layouts/dashboard",
   });
 };
 

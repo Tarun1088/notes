@@ -8,7 +8,7 @@ exports.homepage = async (req, res) => {
   };
   res.render("index", {
     locals,
-    layout: "layouts/front-page",
+    layout: "../views/layouts/front-page",
   });
 };
 
